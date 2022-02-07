@@ -73,7 +73,7 @@ function drawGrid() {
         } else {
           textSize(64);
         }
-
+        textFont("Fredoka");
         fill(0);
         noStroke();
         text(value, i * w + w / 2, j * w + w / 2);

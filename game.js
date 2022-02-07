@@ -27,3 +27,10 @@ function isGameWon() {
   }
   return false;
 }
+
+function createModal(status) {
+  const overlay = document.querySelector(".overlay");
+  const modalStatus = document.querySelector("#status");
+  modalStatus.textContent = status;
+  overlay.style.display = "block";
+}

@@ -11,12 +11,40 @@
 
     <script src="libraries/p5.min.js"></script>
 
+    <script src="game.js"></script>
     <script src="sketch.js"></script>
     <script src="grid.js"></script>
-    <script src="game.js"></script>
     <script src="mobile.js"></script>
+    <script src="storage.js"></script>
   </head>
   <body>
-    <p class="score">Score: <span id="score"></span></p>
+    <header>
+      <h1>2048</h1>
+    </header>
+    <main>
+      <p class="score">Score: <span id="score"></span></p>
+      <p class="max">Max: <span id="max"></span></p>
+      <div class="overlay">
+        <div class="modal">
+          <h2 id="status"></h2>
+          <a href="index.html">
+            <img
+              src="assets/svg/replay.svg"
+              alt="replay"
+              class="replay-image"
+            />
+          </a>
+        </div>
+      </div>
+    </main>
+    <footer class="footer container">
+      <a href="https://rs.school/" target="_blank"
+        ><img src="assets/svg/rss.svg"
+      /></a>
+      <p>2022</p>
+      <a href="https://github.com/Serafim1337" target="_blank"
+        ><img src="assets/png/gh_logo.png"</a
+      >
+    </footer>
   </body>
 </html>

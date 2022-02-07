@@ -95,28 +95,6 @@ function keyPressed() {
       isPlayed = false;
   }
 
-  // switch (currentMove) {
-  //   case "down":
-  //     // do nothing
-  //     break;
-  //   case "up":
-  //     grid = flipGrid(grid);
-  //     isFlipped = true;
-  //     break;
-  //   case "right":
-  //     grid = rotateGrid(grid);
-  //     isRotated = true;
-  //     break;
-  //   case "left":
-  //     grid = rotateGrid(grid);
-  //     grid = flipGrid(grid);
-  //     isRotated = true;
-  //     isFlipped = true;
-  //     break;
-  //   default:
-  //     isPlayed = false;
-  // }
-
   if (isPlayed) {
     let past = copyGrid(grid);
 
@@ -144,11 +122,13 @@ function keyPressed() {
     let gameOver = isGameOver();
     if (gameOver) {
       console.log("Game over");
+      createModal("Game over! :(");
     }
 
     let gameWon = isGameWon();
     if (gameWon) {
       console.log("You win!");
+      createModal("You win! :)");
     }
   }
 }

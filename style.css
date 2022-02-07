@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Fredoka;
+  src: url(assets/fonts/FredokaOne-Regular.ttf);
+}
+
 html,
 body {
   margin: 0;
@@ -5,6 +10,22 @@ body {
   width: 100%;
   height: 100%;
   overflow: auto;
+  background-color: #f8deb9;
+}
+
+h1,
+h2 {
+  font-family: Fredoka;
+  margin: 0;
+}
+
+h1 {
+  font-size: 80px;
+  margin: 30px;
+}
+
+h2 {
+  font-size: 60px;
 }
 
 canvas {
@@ -28,14 +49,85 @@ canvas {
   }
 }
 
-.score {
+.score,
+.max {
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-family: Fredoka;
   text-align: center;
   font-size: 60px;
   animation: animeIn 0.5s ease-in-out;
 }
 
-@media (max-width: 700px) {
-  .p5Canvas {
-    margin: 20% auto 0 auto;
+.max {
+  font-size: 40px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  animation: animeIn 0.5s ease-in-out;
+}
+
+.modal {
+  margin: 20% auto 0 auto;
+  width: 400px;
+  height: 200px;
+  background-color: #3c8be6;
+  border-radius: 20px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.replay-image {
+  width: 50px;
+  filter: invert(100%) sepia(0%) saturate(7487%) hue-rotate(346deg)
+    brightness(107%) contrast(106%);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1440px;
+  flex-grow: 1;
+  flex-flow: wrap-reverse;
+  gap: 30px;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 50px auto 0 auto;
+}
+
+.footer img {
+  width: 100px;
+  filter: invert(0%) sepia(6%) saturate(23%) hue-rotate(230deg) brightness(110%)
+    contrast(105%);
+}
+
+.footer p {
+  font-family: Fredoka;
+  color: #fff;
+  font-size: 30px;
+}
+
+@media (max-width: 500px) {
+  header {
+    display: none;
+  }
+
+  .footer {
+    display: none;
   }
 }

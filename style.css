@@ -50,6 +50,19 @@ canvas {
   }
 }
 
+.records {
+  display: grid;
+  position: absolute;
+  right: 0;
+  margin-right: 30px;
+  font-family: Fredoka;
+  font-size: 40px;
+}
+
+.records p {
+  margin: 0;
+}
+
 .score,
 .max {
   margin-top: 20px;
@@ -130,6 +143,10 @@ canvas {
 
 @media (max-width: 500px) {
   header {
+    display: none;
+  }
+
+  .records {
     display: none;
   }
 

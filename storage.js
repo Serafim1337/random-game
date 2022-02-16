@@ -2,7 +2,11 @@ window.addEventListener("beforeunload", setLocalStorage);
 window.addEventListener("load", getLocalStorage);
 
 function setLocalStorage() {
-  localStorage.setItem("score", score);
+  if (!localStorage.getItem("score")) {
+    localStorage.setItem("score", score);
+  } else if (parseInt(localStorage.getItem("score")) < score) {
+    localStorage.setItem("score", score);
+  }
 }
 
 function getLocalStorage() {

@@ -1,3 +1,9 @@
+setTimeout(() => {
+  if (window.innerWidth > 1200) {
+    document.querySelector(".keys").style.display = "block";
+  }
+}, 400);
+
 function isGameOver() {
   for (let i = 0; i < 4; i++) {
     for (let j = 0; j < 4; j++) {

@@ -72,7 +72,14 @@ function keyPressed() {
   let isFlipped = false;
   let isRotated = false;
   let isPlayed = true;
-
+  if (
+    keyCode == DOWN_ARROW ||
+    keyCode == UP_ARROW ||
+    keyCode == LEFT_ARROW ||
+    keyCode == RIGHT_ARROW
+  ) {
+    document.querySelector(".keys").style.display = "none";
+  }
   switch (keyCode) {
     case DOWN_ARROW:
       // do nothing
